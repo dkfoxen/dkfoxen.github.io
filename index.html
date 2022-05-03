@@ -6,7 +6,7 @@
     <title>Unity WebGL Player | My project</title>
   </head>
   <body style="text-align: center">
-    <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #524F50"></canvas>
+    <canvas id="unity-canvas" width=1920 height=1080 style="width: 1920px; height: 1080px; background: #524F50"></canvas>
     <script src="Build/dkfoxen.github.io.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -18,9 +18,9 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/dkfoxen.github.io.data",
-        frameworkUrl: "Build/dkfoxen.github.io.framework.js",
-        codeUrl: "Build/dkfoxen.github.io.wasm",
+        dataUrl: "Build/dkfoxen.github.io.data.gz",
+        frameworkUrl: "Build/dkfoxen.github.io.framework.js.gz",
+        codeUrl: "Build/dkfoxen.github.io.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "My project",
