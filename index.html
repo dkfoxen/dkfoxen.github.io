@@ -1,113 +1,127 @@
-<!DOCTYPE html>
-<style type="text/css">
-html {
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-html, body {
-    height: 100%;
-}
-canvas {
-    display: block;
-}
-body {
-    margin: 0;
-}
-#unity-container {
-    width: 100%;
-    height: 100%;
-}
-#unity-canvas {
-    width: 100%;
-    height: 100%;
-    background: #000000;
-}
-#loading-cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-</style>
+<html>
+<head>
 
+	<title>Steffen Tander | Web Designer, Director | steffen@tander.io</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+	<link rel="stylesheet" type="text/css" href="resume.css" media="all" />
+
+</head>
 <body>
-<canvas id="unity-canvas"></canvas>
-<div class="spinner"></div>
-<div id="loading-cover"></div>
-<div id="unity-progress-bar-empty"></div>
-<div id="unity-progress-bar-full"></div>
-<div id="unity-fullscreen-button"></div>
-<script>
-      const hideFullScreenButton = "";
-      const buildUrl = "Build";
-      const loaderUrl = buildUrl + "/dkfoxen.github.io.loader.js";
-      const config = {
-        dataUrl: buildUrl + "/dkfoxen.github.io.data",
-        frameworkUrl: buildUrl + "/dkfoxen.github.io.framework.js",
-        codeUrl: buildUrl + "/dkfoxen.github.io.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "My project",
-        productVersion: "0.1",
-      };
 
-    const container = document.querySelector("#unity-container");
-    const canvas = document.querySelector("#unity-canvas");
-    const loadingCover = document.querySelector("#loading-cover");
-    const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
-    const progressBarFull = document.querySelector("#unity-progress-bar-full");
-    const fullscreenButton = document.querySelector("#unity-fullscreen-button");
-    const spinner = document.querySelector('.spinner');
-	const canFullscreen = (function() {
-        for (const key of [
-            'exitFullscreen',
-            'webkitExitFullscreen',
-            'webkitCancelFullScreen',
-            'mozCancelFullScreen',
-            'msExitFullscreen',
-          ]) {
-          if (key in document) {
-            return true;
-          }
-        }
-        return false;
-      }());
+<div id="doc2" class="yui-t7">
+	<div id="inner">
+	
+		<div id="hd">
+			<div class="yui-gc">
+				<div class="yui-u first">
+					<h1>Steffen Tander</h1>
+					<h2>Elektronikfagtekniker</h2>
+				</div>
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        config.devicePixelRatio = 1;
-      }
-      loadingCover.style.display = "";
+				<div class="yui-u">
+					<div class="contact-info">
+						<h3><a id="pdf" href="#">Download PDF</a></h3>
+						<h3><a href="mailto:steffen@tander.io">steffen@tander.io</a></h3>
+						<h3>22 44 41 09</h3>
+					</div><!--// .contact-info -->
+				</div>
+			</div><!--// .yui-gc -->
+		</div><!--// hd -->
 
-      const script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          spinner.style.display = "none";
-          progressBarEmpty.style.display = "";
-          progressBarFull.style.width = `${100 * progress}%`;
-        }).then((unityInstance) => {
-          loadingCover.style.display = "none";
-          if (canFullscreen) {
-            if (!hideFullScreenButton) {
-              fullscreenButton.style.display = "";
-            }
-            fullscreenButton.onclick = () => {
-              unityInstance.SetFullscreen(1);
-            };
-          }
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-	  
-    </script>
-  </body>
+		<div id="bd">
+			<div id="yui-main">
+				<div class="yui-b">
+
+					<div class="yui-gf">
+						<div class="yui-u first">
+						</div>
+						<div class="yui-u">
+							<p class="enlarge">
+							</p>
+						</div>
+					</div><!--// .yui-gf -->
+
+					<div class="yui-gf">
+						<div class="yui-u first">
+						</div>
+						<div class="yui-u">
+
+								<div class="talent">
+								</div>
+
+								<div class="talent">
+								</div>
+
+								<div class="talent">
+								</div>
+						</div>
+					</div><!--// .yui-gf -->
+
+					<div class="yui-gf">
+						<div class="yui-u first">
+						</div>
+						<div class="yui-u">
+							<ul class="talent">
+							</ul>
+
+							<ul class="talent">
+							</ul>
+
+							<ul class="talent">
+							</ul>
+						</div>
+					</div><!--// .yui-gf-->
+
+					<div class="yui-gf">
+	
+						<div class="yui-u first">
+						</div><!--// .yui-u -->
+
+						<div class="yui-u">
+
+							<div class="job">
+							</div>
+
+							<div class="job">
+							</div>
+
+							<div class="job">
+							</div>
+
+
+							<div class="job last">
+							</div>
+
+						</div><!--// .yui-u -->
+					</div><!--// .yui-gf -->
+
+
+					<div class="yui-gf last">
+						<div class="yui-u first">
+						</div>
+						<div class="yui-u">
+						</div>
+					</div><!--// .yui-gf -->
+
+
+				</div><!--// .yui-b -->
+			</div><!--// yui-main -->
+		</div><!--// bd -->
+
+		<div id="ft">
+			<p>Steffen Tander &mdash; <a href="mailto:steffen@tander.io">steffen@tander.io</a> &mdash; 22 44 41 09</p>
+		</div><!--// footer -->
+
+	</div><!-- // inner -->
+
+
+</div><!--// doc -->
+
+
+</body>
 </html>
+
